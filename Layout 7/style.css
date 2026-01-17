@@ -1,0 +1,336 @@
+:root {
+    --primary: #3F007E;
+    --secondary: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+body {
+    background: var(--secondary);
+    overflow-y: auto;
+}
+
+
+.hide-scrollbar ::-webkit-scrollbar {
+       display: none;
+    }
+
+.hide-scrollbar {
+    scrollbar-width: none;
+}    
+
+.hide-scrollbar {
+    overflow: auto;
+    -ms-overflow-style: none;
+}    
+
+.container {
+    width: 100%;
+    padding-top: 24px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding-right: 32px;
+
+    .links {
+        display: flex;
+        width: 488px;
+        height: 40px;
+        gap: 8px;
+
+        .logo {
+            background: var(--primary);
+            width: 160px;
+            margin-right: 8px;
+        }
+
+        .link {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            gap: 16px;
+
+            a {
+                background: var(--primary);
+                flex: 1;
+            }
+        }
+    }
+
+    .search-avatar {
+        display: flex;
+        width: 371px;
+        gap: 12px;
+
+        .search {
+            display: flex;
+            background: var(--primary);
+            flex-grow: 1;
+            border-radius: 28px;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 14px;
+
+            div {
+                background: var(--secondary);
+            }
+
+            .circle {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+            }
+
+            .rectangle {
+                flex-grow: 1;
+                height: 20px;
+            }
+
+            .square {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        .avatar {
+            height: 40px;
+            width: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            flex-shrink: 1;
+        }
+    }
+}
+
+.tags {
+    height: 32px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+
+    span {
+        background: var(--primary);
+        min-width: 80px;
+        border-radius: 20px;
+    }
+}
+
+.ads {
+    height: 320px;
+    display: flex;
+    gap: 17px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 100%;
+    position: relative;
+
+    span {
+        background: var(--primary);
+        min-width: 490px;
+        border-radius: 20px;
+    }
+}
+
+.button-relative {
+    position: relative;
+}
+
+.slide-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    
+    div {
+        height: 60px;
+        width: 60px;
+        background: var(--secondary);
+        border-radius: 8px;
+    }
+}
+
+.bar {
+    width: 285px;
+    height: 40px;
+    background: var(--primary);
+}
+
+.cards {
+    height: 112px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 100%;
+
+    .card {
+        background: var(--primary);
+        min-width: 388px;
+        border-radius: 8px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        section {
+            width: 170px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .line1 {
+                height: 16px;
+                background: var(--secondary);
+            }
+
+            .box-container {
+                height: 16px;
+                display: flex;
+                gap: 5px;
+
+                .box1 {
+                    width: 24px;
+                    background: var(--secondary);
+                }
+
+                .box2 {
+                    width: 48px;
+                    background: var(--secondary);
+                }
+            }
+
+            .line2 {
+                width: 170px;
+                height: 8px;
+                background: var(--secondary);
+            }
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+                width: 202px;
+                display: flex;
+                gap: 4px;
+
+                span {
+                    height: 12px;
+                    flex: 1;
+                }
+
+            }
+
+            span {
+                background: var(--secondary);
+                height: 12px;
+                min-width: 80px;
+            }
+
+
+        }
+    }
+}
+
+.grid-boxes {
+    height: 324px;
+    display: flex;
+    gap: 17px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 100%;
+
+    .grid-box {
+        background: var(--primary);
+        min-width: 388px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 8px;
+        gap: 8px;
+
+        span {
+            width: 100%;
+            height: 100%;
+            background: var(--secondary);
+        }
+    }
+}
+
+.bottom-space {
+    height: 48px;
+}
+
+
+
+@media screen and (width>1200px) {}
+
+@media screen and (width<1200px) {
+    nav {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 16px;
+
+        .search-avatar {
+            .search {
+                max-width: 320px;
+            }
+
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .link {
+                max-width: 320px;
+            }
+        }
+    }
+
+    .container {
+        width: 100%;
+        padding-top: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .ads {
+        span {
+            min-width: 380px;
+        }
+    }
+
+    .cards {
+        .card {
+            min-width: 380px;
+        }
+    }
+
+    .grid-boxes {
+    .grid-box {
+        min-width: 380px;
+    }
+}
+}
